@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e6f0ff;
+}
+
+/* Navbar */
+nav {
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+.program-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0059b3;
+    color: white;
+}
+
+/* Programs Container */
+.programs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 40px;
+}
+
+/* Program Cards */
+.program-card {
+    background: white;
+    width: 260px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.program-card h2 {
+    color: #003366;
+}
+
+.program-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #001f4d;
+    color: white;
+}

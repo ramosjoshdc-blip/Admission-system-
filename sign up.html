@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="sign up.css">
+    <title>Easy Shop Sign up page</title>
+
+</head>
+<body>
+    <div class="panel1">
+        <h1>Create Account</h1>
+        <h3>Sign up to get started</h3>
+    </div>
+    <div class="panel2">
+        <input type="text" id="username" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <input type="password" id="confirmpass" placeholder="Confirm Password">
+        
+        <button id="signupbtn">Sign Up</button>
+        
+        <p id="showpass">Show Password</p>
+        <p>Already have an account? <span class="link-text" onclick="window.location.href='sign in.html'">Sign In</span></p>
+    </div>
+
+    <script>
+
+        const showpass = document.getElementById("showpass");
+        const passwordInput = document.getElementById("password");
+        const confirmInput = document.getElementById("confirmpass");
+        
+        showpass.addEventListener("click", () => {
+            if(passwordInput.type == "password"){
+                passwordInput.type = "text";
+                confirmInput.type = "text";
+                showpass.innerHTML = "Hide Password";
+            } else {
+                passwordInput.type = "password";
+                confirmInput.type = "password";
+                showpass.innerHTML = "Show Password";
+            }
+        });
+        
+
+        const signupbtn = document.getElementById("signupbtn");
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        
+        signupbtn.addEventListener("click", () => {
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPass = document.getElementById("confirmpass").value;
+
+            if(username === "" || email === "" || password === "" || confirmPass === ""){
+                alert("Please fill all fields!");
+                return;
+            }
+
+            if(password !== confirmPass){
+                alert("Passwords do not match!");
+                return;
+            }
+
+
+            const userExists = users.some(u => u.username === username || u.email === email);
+            if(userExists){
+                alert("Username or Email already exists!");
+                return;
+            }
+
+
+            const newUser = {
+                username: username,
+                email: email,
+                password: password
+            };
+
+            users.push(newUser);
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Sign Up Successful!");
+            window.location.href = "sign in.html";
+        });
+    </script>
+</body>
+</html>

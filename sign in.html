@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="sign in.css">
+    <title>Sign in page</title>
+</head>
+<body>
+    <div class="panel1">
+        <h1>Welcome</h1>
+        <h3>Sign in To Access Your Account</h3>
+    </div>
+    <div class="panel2">
+        <img src="malolos university logo.jpeg" alt="" width="100px">
+        <br>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="pass" placeholder="Password">
+        
+        <button id="signinbtn">Sign In</button>
+        
+        <p id="showpass">Show Password</p>
+        <p class="link-text" onclick="window.location.href='forgot password.html'">Forgot Password?</p>
+        <p>Don't have an account? <span class="link-text" onclick="window.location.href='sign up.html'">Sign Up</span></p>
+    </div>
+
+    <script>
+        // Show/Hide Password
+        const showpass = document.getElementById("showpass");
+        const passInput = document.getElementById("pass");
+        
+        showpass.addEventListener("click", () => {
+            if(passInput.type == "password"){
+                passInput.type = "text";
+                showpass.innerHTML = "Hide Password";
+            } else {
+                passInput.type = "password";
+                showpass.innerHTML = "Show Password";
+            }
+        });
+        
+        // Login Logic
+        const signinbtn = document.getElementById("signinbtn");
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        
+        signinbtn.addEventListener("click", () => {
+            const enteredUsername = document.getElementById("username").value.trim();
+            const enteredPassword = passInput.value.trim();
+
+            const foundUser = users.find(user => 
+                user.username === enteredUsername && user.password === enteredPassword
+            );
+
+            if(foundUser){ 
+                alert("Login Successful! Welcome " + foundUser.username);
+                window.location.href = "dashboard2.html"; 
+            } else {
+                alert("Invalid username or password");
+            }
+        });
+    </script>
+</body>
+</html>

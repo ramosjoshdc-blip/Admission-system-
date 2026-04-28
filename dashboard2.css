@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #e6f0ff; /* light blue background */
+}
+
+/* Header */
+header {
+    background: #003366; /* dark blue */
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff; /* white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Section Titles */
+h2 {
+    color: #003366;
+    border-left: 5px solid #0059b3;
+    padding-left: 10px;
+    margin-top: 25px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #003366;
+}
+
+input, select, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #99c2ff;
+    font-size: 14px;
+    outline: none;
+}
+
+/* Focus effect */
+input:focus, select:focus, textarea:focus {
+    border-color: #0059b3;
+    box-shadow: 0 0 5px rgba(0, 89, 179, 0.3);
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #0059b3; /* blue */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003366; /* darker blue */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    color: #003366;
+}

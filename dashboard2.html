@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Admission Portal</title>
+    <link rel="stylesheet" href="dashboard2.css">
+</head>
+<body>
+
+<header>
+    <h1>Malolos University Admission Portal</h1>
+    <p>Apply for Academic Year 2026-2027</p>
+</header>
+
+<div class="container">
+    <form>
+        <h2>Personal Information</h2>
+
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Date of Birth</label>
+        <input type="date" required>
+
+        <label>Gender</label>
+        <select required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+        </select>
+
+        <label>Email Address</label>
+        <input type="email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" required>
+
+        <h2>Academic Information</h2>
+
+        <label>Senior High School</label>
+        <input type="text" required>
+
+        <label>Track/Strand</label>
+        <input type="text" placeholder="e.g. STEM, ABM, HUMSS" required>
+
+        <label>General Average (GPA)</label>
+        <input type="number" step="0.01" required>
+
+        <label>Preferred Course</label>
+        <select required>
+            <option value="">Select Course</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Engineering</option>
+            <option>Business Administration</option>
+            <option>Education</option>
+            <option>Hospitality Management </option>
+            <option>Nursing</option>
+            <option>Criminology</option>
+            <option>Tourism Management </option>
+        </select>
+
+        <label>Upload Transcript</label>
+        <input type="file" required>
+
+        <h2>Address</h2>
+
+        <textarea placeholder="Enter your complete address" required></textarea>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2026 Malolos University Admission </p>
+</footer>
+
+</body>
+</html>

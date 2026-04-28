@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #e6f0ff;
+}
+
+/* Navbar */
+nav {
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+.about-header {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0059b3;
+    color: white;
+}
+
+/* About Content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    background: white;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-content .text {
+    flex: 1;
+}
+
+.about-content .image {
+    flex: 1;
+}
+
+.about-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    background: white;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #001f4d;
+    color: white;
+}
